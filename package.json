@@ -1,17 +1,25 @@
 {
   "name": "laboratorna-1",
   "version": "1.0.0",
+  "description": "Лабораторна робота 1 - JavaScript вправи",
+  "main": "exercise1.js",
   "type": "module",
-  "description": "Лабораторна робота 1: Скалярні типи та посилання, типи даних",
-  "main": "1-scalar-reference.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint *.js",
-    "lint:fix": "eslint *.js --fix"
+    "lint": "eslint exercise*.js",
+    "lint:fix": "eslint exercise*.js --fix"
   },
-  "keywords": ["javascript", "types", "references"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stefect/laboratorni-.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stefect/laboratorni-/issues"
+  },
+  "homepage": "https://github.com/Stefect/laboratorni-#readme",
   "devDependencies": {
     "eslint": "^9.36.0"
   }

@@ -1,7 +1,8 @@
 export default [
   {
+    files: ['**/*.js'],
     languageOptions: {
-      ecmaVersion: 2022,
+      ecmaVersion: 2021,
       sourceType: 'module',
       globals: {
         console: 'readonly',
@@ -12,19 +13,18 @@ export default [
         exports: 'writable',
         module: 'writable',
         require: 'readonly',
-        Symbol: 'readonly',
         BigInt: 'readonly',
-        Infinity: 'readonly',
-        NaN: 'readonly'
+        Symbol: 'readonly',
+        NaN: 'readonly',
+        Infinity: 'readonly'
       }
     },
     rules: {
       'indent': ['error', 2],
       'quotes': ['error', 'single'],
       'semi': ['error', 'always'],
-      'no-console': 'off',
       'no-unused-vars': 'warn',
-      'no-undef': 'error'
+      'no-console': 'off'
     }
   }
 ];
