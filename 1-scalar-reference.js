@@ -1,15 +1,24 @@
 'use strict';
 
-let inc = function inc(n) {
-  return n += 1;
+// Реалізація 1: Функція з сигнатурою inc(n: number): number
+// Повертає нове значення, не змінюючи оригінальну змінну
+const incValue = (n) => {
+  return n + 1;
 };
-const a = 5;
-const b = inc(a);
-console.dir({ a, b });
 
-const obj = { n: 5 };
-inc = function inc(num) {
+const a = 5;
+const b = incValue(a);
+console.dir({ a, b });
+console.log('Результат incValue: a =', a, ', b =', b);
+
+
+// Реалізація 2: Функція з сигнатурою inc(num: Num)
+// Змінює поле n об'єкта, переданого за посиланням
+const incObject = (num) => {
   num.n++;
 };
-inc(obj);
+
+const obj = { n: 5 };
+incObject(obj);
 console.dir(obj);
+console.log('Результат incObject: obj.n =', obj.n);

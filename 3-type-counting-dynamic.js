@@ -1,8 +1,8 @@
 'use strict';
 
 const list = [
-  'Petrovich', 42, true, 'Vlad', 14, false, '+', 'Dota', 322,
-  null, undefined, 'GitHub', -100, '', 0, 'Code', 777, false,
+  'Apple', 156, false, 'Banana', -89, true, '@', 'Coffee', 512,
+  null, undefined, 'Dragon', 73, '', 0, 'Eagle', -42, true,
 ];
 const obj = {};
 
