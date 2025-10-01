@@ -2,6 +2,7 @@
 
 const list = [
   'Petrovich', 42, true, 'Vlad', 14, false, '+', 'Dota', 322,
+  null, undefined, 'GitHub', -100, '', 0, 'Code', 777, false,
 ];
 const obj = {};
 
