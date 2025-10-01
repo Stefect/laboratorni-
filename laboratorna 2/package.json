@@ -1,0 +1,17 @@
+{
+  "name": "laboratorna-2",
+  "version": "1.0.0",
+  "description": "JavaScript exercises for laboratorna 2",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "lint": "eslint ."
+  },
+  "keywords": ["javascript", "exercises"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
+}
