@@ -1,6 +1,3 @@
-// Вправа 3: Підрахунок елементів різних типів у масиві
-
-// Створюємо вихідний масив з різними типами даних
 const array = [
   true,
   'hello',
@@ -29,7 +26,6 @@ const array = [
   false
 ];
 
-// Створюємо об'єкт-колекцію з іменами типів
 const typeCount = {
   number: 0,
   string: 0,
@@ -41,7 +37,6 @@ const typeCount = {
   bigint: 0
 };
 
-// Проходимо по масиву циклом for..of
 for (const item of array) {
   const type = typeof item;
   typeCount[type]++;

@@ -1,6 +1,3 @@
-// Вправа 2: Цикли
-
-// 1. Функція range(start, end) - повертає масив чисел з діапазону [start, end]
 const range = (start, end) => {
   const result = [];
   for (let i = start; i <= end; i++) {
@@ -9,7 +6,6 @@ const range = (start, end) => {
   return result;
 };
 
-// 2. Функція rangeOdd(start, end) - повертає масив непарних чисел з діапазону [start, end]
 const rangeOdd = (start, end) => {
   const result = [];
   for (let i = start; i <= end; i++) {
@@ -20,5 +16,4 @@ const rangeOdd = (start, end) => {
   return result;
 };
 
-// Експорт для тестування
 export { range, rangeOdd };
