@@ -26,76 +26,76 @@ function contract(fn, ...types) {
   };
 }
 
-console.log('=== Тестирование функции contract() ===\n');
+console.log('=== Тестування функції contract() ===\n');
 
-console.log('Тест 1: Контракт для сложения чисел');
+console.log('Тест 1: Контракт для додавання чисел');
 const add = (a, b) => a + b;
 const addNumbers = contract(add, Number, Number, Number);
 try {
   const res1 = addNumbers(2, 3);
   console.log('addNumbers(2, 3) =', res1);
-  console.log('Ожидается: 5\n');
+  console.log('Очікується: 5\n');
 } catch (error) {
-  console.log('Ошибка:', error.message);
+  console.log('Помилка:', error.message);
 }
 
-console.log('Тест 2: Контракт для конкатенации строк');
+console.log('Тест 2: Контракт для конкатенації рядків');
 const concat = (s1, s2) => s1 + s2;
 const concatStrings = contract(concat, String, String, String);
 try {
   const res2 = concatStrings('Hello ', 'world!');
   console.log('concatStrings("Hello ", "world!") =', res2);
-  console.log('Ожидается: "Hello world!"\n');
+  console.log('Очікується: "Hello world!"\n');
 } catch (error) {
-  console.log('Ошибка:', error.message);
+  console.log('Помилка:', error.message);
 }
 
-console.log('Тест 3: Ошибка - неверный тип аргумента');
+console.log('Тест 3: Помилка - невірний тип аргументу');
 try {
   const res3 = addNumbers('2', 3);
   console.log('Результат:', res3);
 } catch (error) {
-  console.log('✓ Ошибка успешно поймана:', error.message);
+  console.log('✓ Помилка успішно впіймана:', error.message);
 }
 
-console.log('\nТест 4: Ошибка - неверный тип второго аргумента');
+console.log('\nТест 4: Помилка - невірний тип другого аргументу');
 try {
   const res4 = addNumbers(2, '3');
   console.log('Результат:', res4);
 } catch (error) {
-  console.log('✓ Ошибка успешно поймана:', error.message);
+  console.log('✓ Помилка успішно впіймана:', error.message);
 }
 
-console.log('\nТест 5: Ошибка - неверный тип возвращаемого значения');
+console.log('\nТест 5: Помилка - невірний тип значення, що повертається');
 const wrongReturn = (a, b) => String(a + b);
 const wrongContract = contract(wrongReturn, Number, Number, Number);
 try {
   const res5 = wrongContract(2, 3);
   console.log('Результат:', res5);
 } catch (error) {
-  console.log('✓ Ошибка успешно поймана:', error.message);
+  console.log('✓ Помилка успішно впіймана:', error.message);
 }
 
-console.log('\nТест 6: Контракт с тремя аргументами');
+console.log('\nТест 6: Контракт з трьома аргументами');
 const sum3 = (a, b, c) => a + b + c;
 const sum3Numbers = contract(sum3, Number, Number, Number, Number);
 try {
   const res6 = sum3Numbers(1, 2, 3);
   console.log('sum3Numbers(1, 2, 3) =', res6);
-  console.log('Ожидается: 6\n');
+  console.log('Очікується: 6\n');
 } catch (error) {
-  console.log('Ошибка:', error.message);
+  console.log('Помилка:', error.message);
 }
 
-console.log('Тест 7: Контракт для умножения');
+console.log('Тест 7: Контракт для множення');
 const multiply = (a, b) => a * b;
 const multiplyNumbers = contract(multiply, Number, Number, Number);
 try {
   const res7 = multiplyNumbers(5, 7);
   console.log('multiplyNumbers(5, 7) =', res7);
-  console.log('Ожидается: 35\n');
+  console.log('Очікується: 35\n');
 } catch (error) {
-  console.log('Ошибка:', error.message);
+  console.log('Помилка:', error.message);
 }
 
 console.log('Тест 8: Контракт для Boolean');
@@ -106,27 +106,27 @@ try {
   const res8b = checkPositive(-3);
   console.log('checkPositive(5) =', res8a);
   console.log('checkPositive(-3) =', res8b);
-  console.log('Ожидается: true, false\n');
+  console.log('Очікується: true, false\n');
 } catch (error) {
-  console.log('Ошибка:', error.message);
+  console.log('Помилка:', error.message);
 }
 
-console.log('Тест 9: Контракт с ошибкой типа в строках');
+console.log('Тест 9: Контракт з помилкою типу в рядках');
 try {
   const res9 = concatStrings('Hello', 123);
   console.log('Результат:', res9);
 } catch (error) {
-  console.log('✓ Ошибка успешно поймана:', error.message);
+  console.log('✓ Помилка успішно впіймана:', error.message);
 }
 
-console.log('\nТест 10: Сложный пример - работа с массивами');
+console.log('\nТест 10: Складний приклад - робота з масивами');
 const joinArray = (arr, separator) => arr.join(separator);
 const joinWithContract = contract(joinArray, Array, String, String);
 try {
   const res10 = joinWithContract(['a', 'b', 'c'], ', ');
   console.log('joinWithContract(["a", "b", "c"], ", ") =', res10);
-  console.log('Ожидается: "a, b, c"');
+  console.log('Очікується: "a, b, c"');
 } catch (error) {
-  console.log('Ошибка:', error.message);
+  console.log('Помилка:', error.message);
 }
 
